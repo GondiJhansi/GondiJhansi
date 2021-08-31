@@ -1,9 +1,10 @@
-package hybridlevel;
 
- class A1 {
+
+
+class A2 {
 	int rn;
 	String name;
-	A1(int rn,String name)
+	A2(int rn,String name)
 	{
 		this.rn = rn ;
 		this.name = name;
@@ -14,10 +15,10 @@ package hybridlevel;
 		System.out.println("sname ="+name);
 	}
 }
-class B1 extends A1
+class B2 extends A2
 {
 	int m1,m2;
-	B1(int rn,String name,int m1,int m2)
+	B2(int rn,String name,int m1,int m2)
 	{
 		super(rn,name);
 		this.m1 = m1 ;
@@ -29,10 +30,10 @@ class B1 extends A1
 		System.out.println("marks2 ="+m2);
 	}
 }
-class C1 extends A1
+class C2 extends A2
 {
 	int m3,m4;
-	C1(int rn,String name,int m3,int m4)
+	C2(int rn,String name,int m3,int m4)
 	{
 		super(rn,name);
 		this.m3 = m3 ;
@@ -44,10 +45,10 @@ class C1 extends A1
 		System.out.println("marks4 ="+m4);
 	}
 }
-class D1 extends C1
+class D2 extends C2
 {
 	int m5,m6;
-	D1(int rn,String name,int m3,int m4,int m5,int m6)
+	D2(int rn,String name,int m3,int m4,int m5,int m6)
 	{
 		super(rn,name,m3,m4);
 		this.m5 = m5 ;
@@ -60,16 +61,16 @@ class D1 extends C1
 		System.out.println("marks6 ="+m6);
 	}
 }
-class File
+ class File
 {
 	public static void main(String[] args)
 	{
 		
-		B1 obj = new B1(10,"jaanu",92,94);
+		B2 obj = new B2(10,"jaanu",92,94);
 		obj.display1();
 		obj.display2();
 		//obj.display3();
-		D1 obj2 = new D1(10,"jaanu",76,83,90,87);
+		D2 obj2 = new D2(10,"jaanu",76,83,90,87);
 		obj2.display1();
 		obj2.display3();
 		obj2.display4();
