@@ -1,26 +1,25 @@
-package Oops;
+package File;
 
-class Add
+class Parent10
 {
-	int x = 14, y = 5;
-	void add()
+	public void m1()
 	{
-		System.out.println("Add is "+(x+y));
-	}
-} 
-class Sub extends Add
-{
-	void sub()
-	{
-		super.add();
-		System.out.println("Sub is "+(super.x-super.y));
+		System.out.println("Parent definition of m1");
 	}
 }
-public class Super
+
+public class Super extends Parent10
 {
-	public static void main(String[] args)
+	public void m1()
 	{
-		Sub obj = new Sub();
-		obj.sub();
+		super.m1();
+		System.out.println("Child definition of m1");
 	}
+	 
+	public static void main(String[] args) 
+	{
+		Super c = new Super();
+		c.m1();
+	}
+
 }
